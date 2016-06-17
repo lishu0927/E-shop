@@ -1,0 +1,137 @@
+.topmenu
+{
+    width: 255px;
+    border: 2px solid #e4393c;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -2px;
+}
+.toptitle {
+    height: 43px;
+    line-height: 43px;
+    font-size: 16px;
+    font-weight: bold;
+    color: White;
+    background: #e4393c;
+    position: absolute;
+    width: 255px;
+    top: -43px;
+}
+.topmenu li
+{
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    list-style-type: none;
+    text-align: left;
+    padding-left: 15px;
+    z-index: 3;
+    border-bottom: 1px dashed #eee;
+}
+.topmenu li a
+{
+    text-decoration: none;
+    color: #313131;
+}
+.topmenu li a:hover
+{
+    text-decoration: underline;
+    font-weight: bold;
+    color: #e4393c;
+}
+.topmenu .lihover /*鼠标移动到上面时，应用的样式*/
+{
+    border: 1px solid #DDD;
+    border-right: 0;
+    box-shadow: 0 0 8px #DDD;
+    -moz-box-shadow: 0 0 8px #DDD;
+    -webkit-box-shadow: 0 0 8px #DDD;
+    background-image: none;
+    height:60px;
+    border-left:4px solid #e4393c;
+    position: relative;
+}
+.topmenu .lihover .submenu /*悬浮层*/
+{
+    display: block;
+}
+
+.topmenu .lihover b
+{
+    display:block;
+    height:30px;
+    line-height:30px;
+    font-weight:normal;
+    font-size:10px;
+}
+.submenu
+{
+    display: none;
+    width: 500px;
+    left: 195px;
+    position: absolute;
+    top: -5px;
+    border: 1px solid #DDD;
+    z-index: 4;
+    background: white;
+    box-shadow: 0 0 8px #DDD;
+    -moz-box-shadow: 0 0 8px #DDD;
+    -webkit-box-shadow: 0 0 8px #DDD;
+}
+.leftdiv
+{
+    float: left;
+    width: 490px;
+    margin: 5px;
+}
+
+.leftdiv dl
+{
+    display: block;
+    border-bottom: 1px dashed #EEE;
+    padding-bottom: 6px;
+    overflow: hidden;
+}
+.leftdiv dl:last-child{
+    border-bottom:0;
+}
+.leftdiv dl dt
+{
+    display: block;
+    float: left;
+    width: 60px;
+    text-align: right;
+    height: 22px;
+    line-height: 22px;
+    padding-right: 6px;
+}
+
+.leftdiv dl dt a
+{
+    color: #e4393c;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 10pt;
+}
+.leftdiv dl dd
+{
+    display: block;
+    overflow: hidden;
+}
+.leftdiv dl dd a
+{
+    display: block;
+    float: left;
+    border-left: 1px solid #CCC;
+    color: #737373;
+    font-size: 9pt;
+    padding: 0 8px;
+    height: 14px;
+    line-height: 14px;
+    margin: 4px 0;
+}
+.topmenu li b
+{
+    display:none;
+}

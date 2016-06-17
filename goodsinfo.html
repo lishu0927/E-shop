@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网上购物系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .container {
+            background: cornsilk;
+            padding: 20px 20px 50px;
+        }
+        img {
+            width: 100%;
+        }
+        .btn-info{
+            width: 120px;
+            margin-left: 30px;
+        }
+        table.table-info tr td{
+            font-size: 16px;
+            height: 35px;
+            line-height: 35px;
+        }
+        table.table tr td:first-child {
+            text-align: right;
+        }
+        table.table tr td:last-child {
+            text-indent: 30px;
+        }
+        .radio-row{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            margin-right: 20px;
+            position: relative;
+        }
+        .radio-row input,.radio-row input+a{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-indent: 0;
+            font-size: 14px;
+            text-align: center;
+            line-height: 30px;
+            color: #0e0e0e;
+        }
+        .radio-row input{
+            z-index: 10000;
+            opacity: 0;
+        }
+        .radio-row input+a {
+            border: 1px solid #ddd;
+        }
+        .radio-row input:checked+a {
+            border: 1px solid #c63205;
+            color: #c63205;
+        }
+        .panel-body img{
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航-->
+<div id="top-part"></div>
+<div id="search-part"></div>
+<!--主体内容-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" >
+            <img src="images/5.jpg" alt="">
+        </div>
+        <div class="col-md-8" >
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">商品详情</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">商品参数</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">评价</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <table class="table table-info">
+                        <tbody>
+                            <tr>
+                                <td class="col-xs-2">Tanmay</td>
+                                <td class="col-xs-10">花花公子休闲修身夏季男士V领半袖打底衫莱卡纯棉韩版体恤</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                            </tr>
+                            <tr>
+                                <td>颜色</td>
+                                <td>
+                                    <div class="radio-row">
+                                        <input type="radio" name="color"  value="">
+                                        <a href="javascript:void(0);" >不限</a>
+                                    </div>
+                                    <div class="radio-row">
+                                        <input type="radio" name="color"  value="">
+                                        <a href="javascript:void(0);" >不限</a>
+                                    </div>
+                                    <div class="radio-row">
+                                        <input type="radio" name="color"  value="">
+                                        <a href="javascript:void(0);" >不限</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>尺码</td>
+                                <td>
+                                    <div class="radio-row">
+                                        <input type="radio" name="size"  value="">
+                                        <a href="javascript:void(0);" >不限</a>
+                                    </div>
+                                    <div class="radio-row">
+                                        <input type="radio" name="size"  value="">
+                                        <a href="javascript:void(0);" >不限</a>
+                                    </div>
+                                    <div class="radio-row">
+                                        <input type="radio" name="size"  value="">
+                                        <a href="javascript:void(0);" >不限</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"  style="text-align: left;text-indent: 40px">
+                                    <button type="button" class="btn btn-info" onclick="javascript:window.location.href='jiesuan.html';">购买</button>
+                                    <button type="button" class="btn btn-info">加入购物车</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    <table class="table table-hover table-param">
+                        <tbody>
+                        <tr>
+                            <td class="col-xs-3 ">Tanmay12</td>
+                            <td class="col-xs-9 ">Bangalore12333333333333333333</td>
+                        </tr>
+                        <tr>
+                            <td>Sachin1111</td>
+                            <td>Mumbai111111111</td>
+                        </tr>
+                        <tr>
+                            <td>Tanmay</td>
+                            <td>Bangalore</td>
+                        </tr>
+                        <tr>
+                            <td>Sachin</td>
+                            <td>Mumbai</td>
+                        </tr>
+                        <tr>
+                            <td>Sachin1111</td>
+                            <td>Mumbai111111111</td>
+                        </tr>
+                        <tr>
+                            <td>Tanmay</td>
+                            <td>Bangalore</td>
+                        </tr>
+                        <tr>
+                            <td>Sachin</td>
+                            <td>Mumbai</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        第一条
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <img src="images/4.jpg" alt="">图片花花公子休闲修身夏季男士V领半袖打底衫莱卡纯棉韩版体恤
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $("#top-part").load("top-part.html");
+    $("#search-part").load("search-part.html");
+</script>
+</html>

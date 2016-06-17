@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网上购物系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .container {
+
+        }
+        img{
+            width: 100%;
+        }
+        ul{
+            border: 0;
+        }
+        .list-address li{
+            border: 0;
+            list-style: none;
+            margin-right: 20px;
+            background: url("images/address.png") no-repeat;
+            height: 162px;
+            width: 240px;
+            background-position: -240px 0;
+        }
+        .list-address li:hover{
+            background-position: -480px 0;
+        }
+        .list-address li.active,.list-address li.active:hover{
+            background-position: 0 0;
+        }
+        .table>tbody>tr>td,.table>tbody>tr>th{
+            position: relative;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            border-top: 0;
+        }
+        p {
+            margin: 5px 0 5px 0;
+        }
+        h3{
+            margin-top: 0;
+        }
+        .footer{
+            height: 40px;
+            line-height: 40px;
+            text-align: right;
+            margin-bottom: 80px;
+        }
+        select{
+            -webkit-appearance: none;
+            height: 32px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+    </style>
+</head>
+<body>
+<!--顶部导航-->
+<div id="top-part"></div>
+<!--主体内容-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="title">确认收货地址</h3>
+            <p class="text-right"><a href="javascript:void(0);" data-toggle="modal" data-target="#myModalAddress">修改地址</a></p>
+            <ul class="list-address ">
+                <li class="col-sm-3 active">
+                    <h4>姓名</h4>
+                    <div style="padding-top: 5px">
+                        <p>址详细地址详细地址详细地址详细地址详细地址详细地址</p>
+                        <p>联动地址</p>
+                        <p>15027100106</p>
+                    </div>
+                </li>
+                <li class="col-sm-3">
+                    <h4>姓名</h4>
+                    <div style="padding-top: 5px">
+                        <p>址详细地址详细地址详细地址详细地址详细地址详细地址</p>
+                        <p>联动地址</p>
+                        <p>15027100106</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-12" style="margin-top: 30px">
+            <h3 class="title">确认商品信息</h3>
+            <table class="table " style="margin-top: 10px">
+                <tbody>
+                    <tr>
+                        <th colspan="3">商品信息</th>
+                        <th>金额（元）</th>
+                        <th>优惠</th>
+                        <th>小计（元）</th>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-1">
+                            <img src="images/4.jpg" alt="">
+                        </td>
+                        <td><br>商品名称商品名称</td>
+                        <td><br>颜色：<br>尺码：</td>
+                        <td><br>价格：</td>
+                        <td><br>无折扣</td>
+                        <td><br>59.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        共有<span style="color: #f71117 ">2</span>件商品，共计：<span style="color: #f71117;font-size: 24px">500.00</span>元
+        <button class="btn btn-warning btn-lg" onclick="window.location.href='fin-order.html'">确认并付款</button>
+    </div>
+</div>
+<div class="modal fade" id="myModalAddress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加收货地址</h4>
+            </div>
+            <div class="modal-body" style="overflow: auto">
+                <form class="form-horizontal col-sm-10" >
+                    <div class="form-group">
+                        <label for="input1" class="col-sm-3 control-label">姓名</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="input1" placeholder="收货人姓名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input2" class="col-sm-3 control-label">电话</label>
+                        <div class="col-sm-9">
+                            <input type="tel" class="form-control" id="input2" placeholder="电话">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">收货地址</label>
+                        <div class="col-sm-9">
+                            <select id="s_province" name="s_province"></select>
+                            <select id="s_city" name="s_city" ></select>
+                            <select id="s_county" name="s_county" onchange="showArea()"></select>
+                            <script class="resources library" src="js/area.js" type="text/javascript"></script>
+                            <script type="text/javascript">_init_area();</script>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input3" class="col-sm-3 control-label">详细地址</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="input3" placeholder="详细地址">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确认添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/area.js"></script>
+<script type="text/javascript">
+    $("#top-part").load("top-part.html");
+</script>
+</html>

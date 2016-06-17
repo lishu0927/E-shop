@@ -1,0 +1,89 @@
+<style>
+    .headimg{
+        border-radius: 50%;
+        width: 100px;
+    }
+    .headimga{
+        display: inline-block;
+        margin-left: 50%;
+        transform: translate(-50%,0);
+    }
+    .hdimglist{
+        text-align: center;
+        padding: 0;
+    }
+    .hdimglist li img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .hdimglist li{
+        display: inline-block;
+        list-style: none;
+    }
+    @media (min-width: 768px){
+        .modal-dialog {
+            width: 400px;
+            margin: 200px auto;
+        }
+    }
+    .a-upload {
+        position: relative;
+        display: inline-block;
+        width: 90px;
+        height: 35px;
+        line-height: 35px;
+        cursor: pointer;
+        color: #888;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+
+    }
+    .a-upload  input {
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        width: 90px;
+        height: 35px;
+        filter: alpha(opacity=0);
+        cursor: pointer;
+    }
+    .a-upload:hover {
+        color: #444;
+        background: #eee;
+        border-color: #ccc;
+        text-decoration: none
+    }
+</style>
+<div>
+    <a class="headimga" data-toggle="modal" data-target="#myModalUserImg"><img src="images/5.jpg" alt="" class="headimg"></a>
+    <p class="text-center">名称</p>
+</div>
+<div class="modal fade" id="myModalUserImg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">修改头像</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="hdimglist">
+                    <li><img src="images/4.jpg" alt=""></li>
+                    <li><img src="images/4.jpg" alt=""></li>
+                    <li><img src="images/4.jpg" alt=""></li>
+                </ul>
+                <p style="text-align: center"><a class="a-upload" style="text-decoration: none;cursor: pointer">
+                    <input type="file" value="自定义头像">自定义头像
+                </a></p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确认修改</button>
+            </div>
+        </div>
+    </div>
+</div>
