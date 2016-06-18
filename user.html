@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网上购物系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .container {
+            background: cornsilk;
+        }
+        img{
+            width: 100%;
+        }
+        ul{
+            border: 0;
+        }
+        .list-group-item{
+            margin-bottom: 0;
+            border: 0;
+            border-bottom: 1px dashed #ddd;
+            background-color: inherit;
+        }
+        .list2{
+            border-bottom: 0;
+        }
+        .panel-default>.panel-heading {
+            color: #e4393c;
+            background-color: #f7f7f7;
+            border-color: #fff;
+        }
+        .panel-default {
+             border-color: #fff;
+        }
+        .panel-group .panel-heading+.panel-collapse>.panel-body {
+             border-top: 1px solid #fff;
+        }
+        .save {
+            padding: 6px 30px;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航-->
+<div id="top-part"></div>
+<!--<div id="search-part"></div>-->
+
+<!--主体内容-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" style="background: #f7f7f7">
+            <ul class="list-group">
+                <li  class="list-group-item" id="userimg-part"></li>
+                <li class="list-group-item">账号设置
+                    <ul class="list-group">
+                        <li class="list-group-item list2">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">基本信息</a>
+                        </li>
+                        <li class="list-group-item list2">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">教育资料</a>
+                        </li>
+                        <li class="list-group-item list2">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">其它信息</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <a href="order.html">我的订单</a>
+                    <ul class="list-group">
+                        <li class="list-group-item list2">
+                            全部订单
+                        </li>
+                        <li class="list-group-item list2">
+                            <span class="badge">14</span>
+                            待付款
+                        </li>
+                        <li class="list-group-item list2">
+                            <span class="badge">14</span>
+                            待收货
+                        </li>
+                        <li class="list-group-item list2">
+                            <span class="badge">14</span>
+                            待评价
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">我的钱包</li>
+                <li class="list-group-item">我的理财</li>
+                <li class="list-group-item">地址管理</li>
+                <li class="list-group-item">安全设置</li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                基本信息
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <div class="col-md-offset-1 col-md-7">
+                                <form class="form-horizontal" style="margin-top: 40px">
+                                    <div class="form-group">
+                                        <label for="input1" class="col-sm-2 control-label">昵称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input1" placeholder="昵称">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input2" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3" class="col-sm-2 control-label">昵称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input3" placeholder="昵称">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input4" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input4" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input5" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input5" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-3 col-sm-8">
+                                            <button type="button" class="btn btn-success save">重置</button>
+                                            <button type="button" class="btn btn-success save">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                教育资料
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <div class="col-md-offset-1 col-md-7">
+                                <form class="form-horizontal" style="margin-top: 40px">
+                                    <div class="form-group">
+                                        <label for="input6" class="col-sm-2 control-label">昵称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input6" placeholder="昵称">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input7" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input7" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input8" class="col-sm-2 control-label">昵称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input8" placeholder="昵称">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input9" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input9" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input10" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input10" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-3 col-sm-8">
+                                            <button type="button" class="btn btn-success save">重置</button>
+                                            <button type="button" class="btn btn-success save">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                其它信息
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <div class="col-md-offset-1 col-md-7">
+                                <form class="form-horizontal" style="margin-top: 40px">
+                                    <div class="form-group">
+                                        <label for="input11" class="col-sm-2 control-label">昵称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input11" placeholder="昵称">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input12" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input12" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input13" class="col-sm-2 control-label">昵称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input13" placeholder="昵称">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input14" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input14" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input15" class="col-sm-2 control-label">word</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="input15" placeholder="word">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-3 col-sm-8">
+                                            <button type="button" class="btn btn-success save">重置</button>
+                                            <button type="button" class="btn btn-success save">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $("#top-part").load("top-part.html");
+    $("#search-part").load("search-part.html");
+    $("#userimg-part").load("userimg-part.html");
+</script>
+</html>
