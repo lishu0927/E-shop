@@ -1,0 +1,136 @@
+<style>
+    ul.list-group.list-group-1 {
+        text-align: right;
+        padding: 5px 30px 0 0;
+        background: #eee;
+    }
+    li.list-group-item.list1 {
+        display: inline-block;
+        border: 0;
+        background: #eee;
+    }
+
+    ul.list-group.list-group-1 a{
+        color: #0e0e0e;
+
+    }
+    /******login弹出层样式****/
+
+    .form{
+        width: 350px;
+        background-color: #fff;
+        height: 220px;
+        margin: 10px auto;
+    }
+    .form>div{
+        position: relative;
+        line-height: 100%;
+        margin-bottom: 8px;
+    }
+    .form>div input{
+        width: 100%;
+        height: 35px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        text-indent: 40px;
+    }
+    .form>div label{
+        position: absolute;
+        left: 0;
+        top:10px;
+        width: 30px;
+        text-align: right;
+        color: #808080;
+    }
+    .form .yanzhengma input{
+        width: 50%;
+        text-indent: 10px;
+    }
+    .form .yanzhengma img{
+        height: 30px;
+        width: 75px;
+        font-size: 0;
+        vertical-align: middle;
+    }
+    .form .yanzhengma a{
+        font-size: small;
+        text-decoration: none;
+        color: #00a5e0;
+    }
+    .form>div.chk label{
+        width: 100px;
+        padding-left: 20px;
+    }
+    .form>div.chk input{
+        width: 22px;
+        height: 22px;
+        margin-top: 8px;
+    }
+    .form>div.chk a{
+        float: right;
+        margin-top: 9px;
+        text-decoration: none;
+        color: #00a5e0;
+    }
+    .buts button{
+        width: 48%;
+        float: left;
+    }
+    .buts button:first-child{
+        margin-right: 4%;
+    }
+    /************login弹出层样式结束********************/
+</style>
+<ul class="list-group list-group-1" id="top">
+    <li class="list-group-item list1"><a href="index.html">首页</a></li>
+    <li class="list-group-item list1">登录【<a href="" data-toggle="modal" data-target="#myModalLogin" style="font-size: small;color:#e4393c ">请登录</a>】</li>
+    <li role="presentation" class="dropdown list-group-item list1">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            xx,欢迎登陆
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="user.html">个人设置</a></li>
+            <li><a href="#">切换账号</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+    </li>
+    <li class="list-group-item list1"><a href="register.html"> 注册</a></li>
+    <li class="list-group-item list1"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="color:#c63205"></span> 购物车</a></li>
+    <li class="list-group-item list1"><a href="order.html"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> 我的订单</a></li>
+</ul>
+<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">欢迎登陆</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form">
+                    <div class="name">
+                        <label for="username"><span class="glyphicon glyphicon-user"></span></label>
+                        <input type="text" placeholder="用户名" id="username" >
+                    </div>
+                    <div class="password">
+                        <label for="userpwd"><span class="glyphicon glyphicon-lock"></span></label>
+                        <input type="text" placeholder="请输入密码"  id="userpwd">
+                    </div>
+                    <div class="yanzhengma">
+                        <input type="text" placeholder="输入验证码"  id="yanzhengma" width="50%">
+                        <img src="images/yanzhengma.JPG" alt="" height="35" width="80">
+                        <a href="#">换一张</a>
+                    </div>
+                    <div class="chk">
+                        <label for="ch1" width="60px">10天免登陆</label>
+                        <input type="checkbox" id="ch1">
+                        <a href="">免费注册</a>
+                    </div>
+                    <div class="buts">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-success">登陆</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

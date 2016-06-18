@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网上购物系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sub-menu.css">
+    <style>
+        .container {
+            background: cornsilk;
+        }
+        .row.row-search {
+            padding: 30px 0 50px 0;
+            background: #fff;
+        }
+        .form-control{
+            height: 47px;
+        }
+        .btn-search{
+            padding: 9px 26px;
+            background: #e4393c;
+            color: #fff;
+            font-size: 19px;
+        }
+        .btn-search:hover {
+            color: #fff;
+            background-color: #f66060;
+        }
+        .goodslist div  img{
+            width: 100%;
+        }
+        .goodslist div p{
+            text-align: center;
+            margin: 5px 0 ;
+            color: #4d4d4d;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航-->
+<div id="top-part"></div>
+<!--主体内容-->
+<div class="container">
+    <!--第一块，search模块-->
+    <div class="row row-search" >
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-5">
+            <div class="input-group">
+                <input type="text" class="form-control" autofocus placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-search" type="button">搜索</button>
+                  </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="height: 43px;line-height: 43px;color: #fff;font-size: 16px; background: #f66060">
+            全部与“XX”相关的商品：
+        </div>
+    </div>
+    <div class="row goodslist">
+        <div class="col-md-3" >
+            <a href="#">
+                <img src="images/5.jpg" alt="">
+                <p>海澜之家夏季v领纯色修身t恤</p>
+                <p>￥99</p>
+            </a>
+        </div>
+        <div class="col-md-3" >
+            <a href="#">
+                <img src="images/5.jpg" alt="">
+                <p>海澜之家夏季v领纯色修身t恤</p>
+                <p>￥99</p>
+            </a>
+        </div>
+        <div class="col-md-3" >
+            <a href="#">
+                <img src="images/5.jpg" alt="">
+                <p>海澜之家夏季v领纯色修身t恤</p>
+                <p>￥99</p>
+            </a>
+        </div>
+        <div class="col-md-3" >
+            <a href="#">
+                <img src="images/5.jpg" alt="">
+                <p>海澜之家夏季v领纯色修身t恤</p>
+                <p>￥99</p>
+            </a>
+        </div>
+        <div class="col-md-3" >
+            <a href="#">
+                <img src="images/5.jpg" alt="">
+                <p>海澜之家夏季v领纯色修身t恤</p>
+                <p>￥99</p>
+            </a>
+        </div>
+        <div class="col-md-3" >
+            <a href="#">
+                <img src="images/5.jpg" alt="">
+                <p>海澜之家夏季v领纯色修身t恤</p>
+                <p>￥99</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $("#top-part").load("top-part.html");
+</script>
+
+</html>
